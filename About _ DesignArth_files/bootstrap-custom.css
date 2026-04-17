@@ -29,6 +29,7 @@
 }
 .f-bold {
   font-family: 'Conv_aktivgrotesk_bd-webfont';
+  color: #000000;
 }
 
 .f-mrthi {
@@ -1045,27 +1046,26 @@ header .logo{
   }
 
   .breadcum h1 {
-    background: url('../images/text-bg.png') no-repeat;
-       background-size: cover;
-    background-position: 50% 50%; 
     font-size: 65px;
     margin: 0;
-    color: transparent;
+    color: #fff;
     line-height: 1;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -ms-background-clip: text;
-    -ms-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    -ms-background-clip: initial;
+    -ms-text-fill-color: initial;
   }
   .breadcum .bg-img {
     background: url(../images/red-white-ring.png) no-repeat;
     background-size: contain;
     padding: 0px;
-   height: 110px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 310px;
+    width: 400px;
     margin: 0 auto;
   }
   .breadcum-wrapp {
@@ -2408,15 +2408,18 @@ background-color:  #2867B2;
   border-bottom-right-radius: 0 !important;
 }
 .services-list .img-box .style-icon {
-  border-radius: 48%;
+  border-radius: 8%;
       padding: 15px 25px;
     font-size: 50px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-  background: rgba(168,24,48,1);
-  color: #fff;
+  /* background: rgba(168,24,48,1); */
+  /* background: #ffffff; */
+  
+  color: #ffffff;
+  background-color: #ffffff;
 }
 .services-list .img-div .img-box {
   background-image: linear-gradient(to right, rgba(168,24,48,1) 25%, #fff 85%);

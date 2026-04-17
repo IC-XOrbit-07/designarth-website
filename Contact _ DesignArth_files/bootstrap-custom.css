@@ -292,8 +292,9 @@ header .logo{
     height: 100%;
 }*/
 .parallax-container {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
 }
 .parallax-parent {
     position: absolute;
@@ -1045,27 +1046,26 @@ header .logo{
   }
 
   .breadcum h1 {
-    background: url('../images/text-bg.png') no-repeat;
-       background-size: cover;
-    background-position: 50% 50%; 
     font-size: 65px;
     margin: 0;
-    color: transparent;
+    color: #fff;
     line-height: 1;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -ms-background-clip: text;
-    -ms-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    -ms-background-clip: initial;
+    -ms-text-fill-color: initial;
   }
   .breadcum .bg-img {
     background: url(../images/red-white-ring.png) no-repeat;
     background-size: contain;
     padding: 0px;
-   height: 110px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 310px;
+    width: 400px;
     margin: 0 auto;
   }
   .breadcum-wrapp {
