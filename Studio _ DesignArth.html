@@ -21,6 +21,224 @@
     <style>
       @import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900&display=swap");
     </style>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .da-footer {
+        background: #2a2a2a;
+        color: #fff;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        width: 100%;
+      }
+      .da-cta {
+        display: flex;
+        align-items: stretch;
+        border-bottom: 3px solid #8b1a1a;
+      }
+      .da-cta-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: 1.2rem 2.5rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .da-cta-left h4 {
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+      }
+      .da-cta-link {
+        color: #c0392b;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .da-counters {
+        background: #8b1a1a;
+        display: flex;
+        align-items: center;
+        padding: 1rem 2.5rem;
+        gap: 1.5rem;
+        flex-shrink: 0;
+      }
+      .da-counter-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .da-counter-icon svg {
+        width: 26px;
+        height: 26px;
+        fill: white;
+        display: block;
+      }
+      .da-counter-num {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .da-counter-plus {
+        font-size: 14px;
+      }
+      .da-counter-label {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .da-main {
+        display: grid;
+        grid-template-columns: 1.2fr 1.2fr 0.9fr 0.9fr 1.3fr;
+        gap: 1.5rem;
+        padding: 2.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .da-brand-desc {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 1.6;
+        margin-bottom: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      .da-social-row {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .da-social-btn {
+        display: inline-flex;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+      .da-social-btn:hover {
+        opacity: 1;
+      }
+      .da-social-btn svg {
+        display: block;
+        fill: white;
+      }
+      .da-col-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 12px;
+      }
+      .da-col a {
+        display: block;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        margin-bottom: 8px;
+        transition: color 0.2s;
+      }
+      .da-col a:hover {
+        color: #c0392b;
+      }
+      .da-col-services a {
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .da-contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .da-contact-icon {
+        width: 22px;
+        min-width: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1px;
+      }
+      .da-contact-icon svg {
+        width: 18px;
+        height: 18px;
+        fill: rgba(255, 255, 255, 0.5);
+      }
+      .da-contact-label {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 2px;
+      }
+      .da-contact-val {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        line-height: 1.6;
+      }
+      .da-contact-val:hover {
+        color: #c0392b;
+      }
+      .da-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0.9rem 2.5rem;
+        background: #222;
+      }
+      .da-bottom p,
+      .da-bottom a {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        text-decoration: none;
+      }
+      .da-bottom a:hover {
+        color: #c0392b;
+      }
+      .da-bottom-links {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .da-dot {
+        color: #c0392b;
+      }
+      .da-red {
+        color: #c0392b;
+      }
+      @media (max-width: 600px) {
+        .da-cta {
+          flex-direction: column;
+        }
+        .da-cta-left {
+          padding: 1rem 1.2rem;
+        }
+        .da-counters {
+          padding: 1rem 1.2rem;
+          gap: 1rem;
+          justify-content: space-between;
+        }
+        .da-main {
+          grid-template-columns: 1fr 1fr;
+          gap: 1.5rem;
+          padding: 1.5rem 1.2rem;
+        }
+        .da-col-brand {
+          grid-column: 1 / -1;
+        }
+        .da-col-services {
+          display: none;
+        }
+        .da-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem 1.2rem;
+          gap: 0.4rem;
+        }
+      }
+    </style>
     <style>
       @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap');
           <link
@@ -1921,176 +2139,222 @@
       </section>
     </div>
 
-    <footer style="margin-top: 40px">
-      <div class="container need-further">
-        <div class="left-box">
-          <h4 class="white f-regular">Need further help?</h4>
-          <a href="https://designarth.com/contact" class="f-bold aks"
-            >Ask Our Specialists.
-            <span class="icon-right-arrow11 right-arrow"></span>
-            <span class="icon-right-arrow11 right-arrow"></span
-          ></a>
+    <div class="da-footer">
+      <div class="da-cta">
+        <div class="da-cta-left">
+          <h4>Need further help?</h4>
+          <a href="https://designarth.com/contact" class="da-cta-link"
+            >Ask Our Specialists. &rsaquo;&rsaquo;</a
+          >
         </div>
-        <div class="right-box">
-          <div class="flex-div counter">
-            <div class="flex-item">
-              <span class="icon-jdf89 style-icon"></span>
-              <div class="info">
-                <h5 class="white f-regular counter-value" data-count="100">
-                  00
-                </h5>
-                <span class="icon-plus"></span>
-                <p class="white f-regular">Innovations</p>
-              </div>
+        <div class="da-counters">
+          <div class="da-counter-item">
+            <div class="da-counter-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 4L4 28h8v28h16V40h8v16h16V28h8L32 4z" />
+              </svg>
             </div>
-            <div class="flex-item">
-              <span class="icon-hg76jh78 style-icon"></span>
-              <div class="info">
-                <h5 class="white f-regular counter-value" data-count="75">
-                  00
-                </h5>
-                <span class="icon-plus"></span>
-                <p class="white f-regular">Trusted Partners</p>
+            <div>
+              <div class="da-counter-num">
+                100<span class="da-counter-plus">+</span>
               </div>
+              <div class="da-counter-label">Innovations</div>
             </div>
-            <div class="flex-item">
-              <span class="icon-gb6 style-icon"></span>
-              <div class="info">
-                <h5 class="white f-regular counter-value" data-count="50">
-                  00
-                </h5>
-                <span class="icon-plus"></span>
-                <p class="white f-regular">Turnkey Projects</p>
+          </div>
+          <div class="da-counter-item">
+            <div class="da-counter-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 4L4 28h8v28h16V40h8v16h16V28h8L32 4z" />
+              </svg>
+            </div>
+            <div>
+              <div class="da-counter-num">
+                75<span class="da-counter-plus">+</span>
               </div>
+              <div class="da-counter-label">Trusted Partners</div>
+            </div>
+          </div>
+          <div class="da-counter-item">
+            <div class="da-counter-icon">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="16" width="56" height="40" rx="4" />
+                <rect x="20" y="4" width="24" height="16" rx="2" />
+                <rect
+                  x="24"
+                  y="28"
+                  width="16"
+                  height="14"
+                  rx="1"
+                  fill="#8b1a1a"
+                />
+              </svg>
+            </div>
+            <div>
+              <div class="da-counter-num">
+                50<span class="da-counter-plus">+</span>
+              </div>
+              <div class="da-counter-label">Turnkey Projects</div>
             </div>
           </div>
         </div>
-        <div class="clearfix"></div>
       </div>
-      <div class="container flex-div">
-        <div class="column">
-          <span class="new-iconDA-white footer-logo"></span>
-          <p class="f-regular">
-            The Product Innovation,<br />
-            Design &amp; Development Company
+
+      <div class="da-main">
+        <div class="da-col da-col-brand">
+          <p class="da-brand-desc">
+            The Product Innovation,<br />Design &amp; Development Company
           </p>
-          <div class="social-box">
+          <div class="da-social-row">
             <a
-              class="s-link"
+              class="da-social-btn"
               href="https://www.facebook.com/DesignarthSolutions/"
               target="_blank"
-              rel="noreferrer"
-              ><span class="icon-facebook"></span
-            ></a>
+              title="Facebook"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+            </a>
             <a
-              href="https://in.linkedin.com/company/designarth-solutions-llp?trk=public_profile_experience-item_result-card_subtitle-click"
-              class="s-link"
+              class="da-social-btn"
+              href="https://www.linkedin.com/company/designarth-solutions-llp"
               target="_blank"
-              rel="noreferrer"
-              ><span class="icon-linkedin"></span
-            ></a>
+              title="LinkedIn"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="column d-none d-md-block">
-          <a
-            href="https://designarth.com/services#engineering-product-design"
-            class="srvc-link f-regular"
+
+        <div class="da-col da-col-services">
+          <a href="https://designarth.com/services#engineering-product-design"
             >Design &amp; Engineering</a
           >
-          <a
-            href="https://designarth.com/services#electronics-software"
-            class="srvc-link f-regular"
+          <a href="https://designarth.com/services#electronics-software"
             >Electronics &amp; Software</a
           >
-          <a
-            href="https://designarth.com/services#prototyping-manufacturing"
-            class="srvc-link f-regular"
+          <a href="https://designarth.com/services#prototyping-manufacturing"
             >Manufacturing &amp; Validation Support</a
           >
-          <a
-            href="https://designarth.com/services#business-consulting"
-            class="srvc-link f-regular"
-            >Business Consulting
-          </a>
-          <a href="https://designarth.com/services" class="srvc-link f-regular"
-            >More...
-          </a>
+          <a href="https://designarth.com/services#business-consulting"
+            >Business Consulting</a
+          >
+          <a href="https://designarth.com/services">More...</a>
         </div>
-        <div class="column">
-          <h5 class="white f-regular">Quick Links</h5>
-          <!-- <a href="https://designarth.com/about">About Us</a> -->
+
+        <div class="da-col">
+          <p class="da-col-title">Quick Links</p>
           <a href="https://designarth.com/services">Services</a>
-          <a href="https://designarth.com/studio" class="active">Studio</a>
+          <a href="https://designarth.com/studio">Studio</a>
           <a href="https://designarth.com/shop">Shop</a>
           <a href="https://designarth.com/blogs">Blogs</a>
           <a href="https://designarth.com/contact">Contact Us</a>
         </div>
-        <div class="column">
-          <h5 class="white f-regular">About DesignArth</h5>
+
+        <div class="da-col">
+          <p class="da-col-title">About DesignArth</p>
           <a href="https://designarth.com/about#overview">Overview</a>
           <a href="https://designarth.com/about#vision-mission"
             >Vision &amp; Mission</a
           >
           <a href="https://designarth.com/about#our-team">Team</a>
-          <!-- <a href="https://designarth.com/about#certificates">Certificates</a>
-			<a href="https://designarth.com/about#testimonials">Testimonials</a> -->
         </div>
-        <div class="column">
-          <span class="icon-placeholder placeholder"></span>
-          <div class="right-box">
-            <span class="f-title f-regular white">Find us</span>
-            <p class="f-regular">
-              <span class="white">Designarth Solutions LLP</span><br />
-              Shop No: 15, 1st Floor, Anandram Laghu Udyog Sankul, Opp. S.T
-              Depot, Khopat, Thane (W). india - 400601
-            </p>
-          </div>
-          <div class="clearfix"></div>
-          <!-- <br> -->
-          <span class="icon-message placeholder"></span>
-          <div class="right-box">
-            <span class="f-title f-regular white">Email us</span>
-            <a href="mailto:info@designarth.com">info@designarth.com</a>
-          </div>
 
-          <span class="icon-phone-call placeholder"></span>
-          <div class="right-box">
-            <span class="f-title f-regular white">Call us</span>
-            <a href="tel:+917738436485">+91 7738436485</a>
+        <div class="da-col">
+          <div class="da-contact-item">
+            <div class="da-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+            </div>
+            <div>
+              <span class="da-contact-label">Find us</span>
+              <span class="da-contact-val"
+                >Designarth Solutions LLP<br />Shop No: 15, 1st Floor, Anandram
+                Laghu Udyog Sankul, Opp. S.T Depot, Khopat, Thane (W). india -
+                400601</span
+              >
+            </div>
+          </div>
+          <div class="da-contact-item">
+            <div class="da-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <span class="da-contact-label">Email us</span>
+              <a href="mailto:info@designarth.com" class="da-contact-val"
+                >info@designarth.com</a
+              >
+            </div>
+          </div>
+          <div class="da-contact-item">
+            <div class="da-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <span class="da-contact-label">Call us</span>
+              <a href="tel:+917738436485" class="da-contact-val"
+                >+91 7738436485</a
+              >
+            </div>
           </div>
         </div>
-        <div class="clearfix"></div>
       </div>
-      <div class="btm-strip container">
-        <div class="strip-column">
-          <p class="f-regular grey">
-            All Rights Reserved. © 2019 <span class="red">DesignArth</span>
-          </p>
-        </div>
-        <div class="strip-column">
+
+      <div class="da-bottom">
+        <p>
+          All Rights Reserved. © 2019 <span class="da-red">DesignArth</span>
+        </p>
+        <div class="da-bottom-links">
           <a href="https://designarth.com/disclaimer">Disclaimer</a>
-          <span class="dots"></span>
+          <span class="da-dot">•</span>
           <a href="https://designarth.com/terms-condition"
             >Terms &amp; Conditions</a
           >
-          <span class="dots"></span>
+          <span class="da-dot">•</span>
           <a href="https://designarth.com/privacy-policy">Privacy Policy</a>
-          <span class="dots"></span>
-          <!-- <a href="https://designarth.com/disclaimer">Career</a>
-			<span class="dots"></span> -->
+          <span class="da-dot">•</span>
           <a href="https://designarth.com/sitemap">Sitemap</a>
         </div>
-        <div class="strip-column">
-          <p class="grey f-regular">
-            Designed &amp; Developed by
-            <a href="https://www.gordinateur.com/" target="_blank"
-              >G-Ordinateur</a
-            >
-          </p>
-        </div>
-        <div class="clearfix"></div>
+        <p>
+          Designed &amp; Developed by
+          <a href="https://www.gordinateur.com/" target="_blank"
+            >G-Ordinateur</a
+          >
+        </p>
       </div>
-    </footer>
+    </div>
+
     <script
       type="text/javascript"
       src="./Studio _ DesignArth_files/jquery.min.js.download"
